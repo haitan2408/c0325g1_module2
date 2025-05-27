@@ -13,6 +13,7 @@ public class Student extends Person {
         super();
     }
 
+
     public Student(float point, String className) {
         super();
         this.point = point;
@@ -26,10 +27,6 @@ public class Student extends Person {
 //        => giống this nhưng thay vì gọi các thành phần của lớp hiện tại thì nó sẽ gọi các thành phần của lớp cha gần nó nhất
        this.point = point;
        this.className = className;
-
-    }
-
-    public void eat() {
 
     }
 }

@@ -2,7 +2,7 @@ package ss4_oop.model;
 
 import java.time.LocalDate;
 
-public class Person {
+public abstract class Person {
 
     private static int count = 0;
 
@@ -109,7 +109,4 @@ public class Person {
 
     }
 
-    public void eat() {
-
-    }
 }

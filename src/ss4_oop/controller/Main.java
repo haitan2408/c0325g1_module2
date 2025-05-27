@@ -1,6 +1,8 @@
 package ss4_oop.controller;
 
 import ss4_oop.model.Student;
+import ss4_oop.service.IStudentService;
+import ss4_oop.service.StudentService;
 
 import java.time.LocalDate;
 import java.util.Scanner;
@@ -12,10 +14,22 @@ public class Main {
 //        Student student = new Student(1, "HaiTT", "123456789", localDate, "QN", true);
 //        Student student2 = new Student();
 //        displayStudent(student);
-        Student student3 = new Student();
-        System.out.println(student3);
-        student3.setName("HaiTTQN");
-        displayStudent(student3);
+//        Student student3 = new Student();
+//        System.out.println(student3);
+//        student3.setName("HaiTTQN");
+//        displayStudent(student3);
+        IStudentService studentService = new StudentService();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Menu chương trình");
+        System.out.println("1. Thêm mới");
+        System.out.println("2. Chỉnh sửa");
+        System.out.println("3. Xóa");
+        int choice = Integer.parseInt(sc.nextLine());
+        switch (choice) {
+            case 1:
+                Student student = createStudent();
+                studentService.add(student);
+        }
 
     }
 

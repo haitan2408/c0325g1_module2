@@ -17,5 +17,6 @@ public class Student {
         Student st1 = new Student("haiTT");
         Student st2 = new Student("haiTT");
         System.out.println(st1.equals(st2));
+        float a = 5l;
     }
 }

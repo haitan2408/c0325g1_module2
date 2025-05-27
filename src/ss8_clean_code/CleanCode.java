@@ -1,4 +1,6 @@
-package com.codegym.config;
+package ss8_clean_code;
+
+import ss4_oop.controller.Main;
 
 public class CleanCode {
     public int sum(int num1,int num2,int num3){
@@ -9,11 +11,16 @@ public class CleanCode {
         // Do something
     }
 
-    public boolean is_leap_year(int year) {
-        return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
-    }
+//    public boolean is_leap_year(int year) {
+//        return 
+//    }
 
+//    Description
+//    param: có 2 tham số.
+//    return:
+//    Creator:
     public int getDayOfMonth(int month, int year) {
+
         switch (month) {
             case 1:
                 return 31;
@@ -38,9 +45,13 @@ public class CleanCode {
             case 11:
                 return 30;
             case 2:
-                return is_leap_year(year) ? 29 : 28;
+                return isALeapYear(year) ? 29 : 28;
             default:
                 return -1;
         }
+    }
+
+    public boolean isALeapYear(int year) {
+        return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
     }
 }
