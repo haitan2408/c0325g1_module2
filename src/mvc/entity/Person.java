@@ -1,6 +1,8 @@
 package mvc.entity;
 
-public class Person {
+import java.io.Serializable;
+
+public class Person implements Serializable {
     private long code;
     private String name;
     private String address;
