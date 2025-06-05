@@ -1,7 +1,7 @@
 package mvc.entity;
 
 public class Student extends Person {
-    private float point;
+    private Float point;
     private String className;
 
     public Student() {
@@ -13,11 +13,11 @@ public class Student extends Person {
         this.className = className;
     }
 
-    public float getPoint() {
+    public Float getPoint() {
         return point;
     }
 
-    public void setPoint(float point) {
+    public void setPoint(Float point) {
         this.point = point;
     }
 

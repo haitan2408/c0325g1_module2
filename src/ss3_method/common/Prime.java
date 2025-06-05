@@ -1,6 +1,6 @@
 package ss3_method.common;
 
-public class CheckPrime {
+public class Prime {
 
     public static boolean isPrime(int number) {
         if(number <2) {

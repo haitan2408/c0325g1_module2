@@ -5,10 +5,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class DemoTest {
+
     @Test
-    public void testSum1() throws Exception {
-      Demo demo = new Demo();
-      long result = demo.sum(3,5);
-      assertEquals(result, 8, "Đáp án của 3 + 5 phải bằng 8");
+    void sum() {
+        assertEquals(-2147483649l, Demo.sum(-2147483640, -9));
     }
 }

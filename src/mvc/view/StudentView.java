@@ -21,6 +21,10 @@ public class StudentView {
         System.out.println("Nhập Tên");
 //        2^31 -1
         String name = scanner.nextLine();
+        while (!name.matches("^[a-zA-Z ]{4,100}$")) {
+            System.out.println("Yêu cầu nhập đúng format. VD: Le A");
+            name = scanner.nextLine();
+        }
 
         System.out.println("Nhập Địa chỉ");
         String address = scanner.nextLine();

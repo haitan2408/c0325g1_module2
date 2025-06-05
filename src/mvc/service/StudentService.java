@@ -10,7 +10,18 @@ import java.util.List;
 
 public class StudentService implements IStudentService {
     private IStudentRepository studentRepository = new StudentRepository();
+    private static StudentService instance;
 
+    public static StudentService getInstance() {
+        if(instance == null) {
+            instance = new StudentService();
+        }
+        return instance;
+    }
+
+    private StudentService() {
+
+    }
     @Override
     public List<Student> findAll() {
 

@@ -2,6 +2,7 @@ package mvc.controller;
 
 import mvc.entity.Student;
 import mvc.service.IStudentService;
+import mvc.service.ServiceFactory;
 import mvc.service.StudentService;
 import mvc.view.CommonView;
 import mvc.view.StudentView;
@@ -14,7 +15,7 @@ import static mvc.utils.ConstantMenu.ADD;
 import static mvc.utils.ConstantMenu.DISPLAY;
 
 public class StudentController {
-    private IStudentService studentService = new StudentService();
+    private IStudentService studentService = (IStudentService) ServiceFactory.getService("student");
     private Scanner scanner = new Scanner(System.in);
 
     public void displayMenu() {

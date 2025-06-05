@@ -7,6 +7,8 @@ import java.util.List;
 
 public interface IService<T extends Person> {
 
+
+
     List<T> findAll();
     void add(T student);
 }
